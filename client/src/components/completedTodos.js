@@ -2,6 +2,7 @@ import React from 'react'
 import '../style/components/completed-todos.sass'
 import Todo from './todo'
 
+import FlipMove from 'react-flip-move';
 
 // export const TodoList = (props) => {
 class CompletedTodos extends React.Component {
@@ -33,6 +34,7 @@ class CompletedTodos extends React.Component {
         <div className="completed-todos">
           <h3>Completed Todos</h3>
           <ul>
+            <FlipMove>
             {
               this.props.todos.map((props, i) => (
                   <Todo key={i}
@@ -40,6 +42,7 @@ class CompletedTodos extends React.Component {
                         {...props}/>
               ))
             }
+            </FlipMove>
           </ul>
         </div>
     );

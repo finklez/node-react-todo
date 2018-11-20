@@ -2,6 +2,7 @@ import React from 'react'
 import '../style/components/todo-list.sass'
 import Todo from './todo'
 
+import FlipMove from 'react-flip-move';
 
 // export const TodoList = (props) => {
 class TodoList extends React.Component {
@@ -34,6 +35,8 @@ class TodoList extends React.Component {
         <div className="todo-list">
           <h3>TODOs</h3>
           <ul>
+
+            <FlipMove>
             {
               this.props.todos.map((props, i) => (
                   <Todo key={i}
@@ -42,6 +45,7 @@ class TodoList extends React.Component {
                         {...props}/>
               ))
             }
+            </FlipMove>
           </ul>
           <input type="text" onChange={this.updateText}/>
           <button onClick={this.handleAdd}>Add</button>

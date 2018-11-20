@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 var redis = require('redis');
-var client = redis.createClient(); // this creates a new client
+var client = redis.createClient(process.env.REDIS_URL);
 
 var Promise = require("bluebird");
 Promise.promisifyAll(redis);
