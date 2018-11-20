@@ -1,0 +1,67 @@
+@import ./variables
+@import ./mixins
+
+.top-vspace-none
+  margin-top: 0
+
+.alert-box
+  background: $danger
+  font-size: $font-size-base-desktop
+  padding: 0
+  transition: all .5s ease-in-out
+  opacity: 0
+  color: $danger-dark
+  border: 0
+  margin: 0
+  &.error
+    border: 1px solid $danger-dark
+    padding: 5px 10px
+    opacity: 1
+    margin: 20px 0
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(359deg)
+
+.svg-icon
+  width: auto
+  height: auto
+  &.svg-spin
+    &.animated
+      animation: spin 1.5s linear infinite
+
+.svg-wrap
+  &.icon
+    width: 20px
+    vertical-align: middle
+    display: inline-block
+  &.loader
+    display: none
+    .in-progress &
+      display: inline-block
+
+.btn
+  border: 0
+  padding: 5px 10px
+  cursor: pointer
+  &, &:active, &:hover
+    background: transparent
+
+.btn-info
+  background: $info
+  &:active, &:hover
+    background: darken($info, 20%)
+
+.flex-box
+  display: flex
+
+a
+  &, &:hover, &:active
+    color: darken($info, 20%)
+    text-decoration: none
+
+.handle
+  cursor: move

@@ -1,0 +1,93 @@
+@import ./variables
+
+//== Common
+
+@mixin clearfix
+  &:after
+    content: " "
+    display: block
+    clear: both
+
+@mixin view-height
+  min-height: calc(100vh - #{$header-size})
+
+
+
+//== MQ
+
+@mixin mobile-s
+  @media (max-width: $mobile-m - 1)
+    @content
+
+@mixin mobile-m
+  @media (min-width: $mobile-m) and (max-width: $mobile-l - 1)
+    @content
+
+@mixin mobile-l
+  @media (min-width: $mobile-l) and (max-width: $tablet - 1)
+    @content
+
+@mixin mobile
+  @media (max-width: $tablet - 1)
+    @content
+
+@mixin tablet
+  @media (min-width: $tablet) and (max-width: $desktop)
+    @content
+
+@mixin desktop
+  @media (min-width: $tablet)
+    @content
+
+@mixin desktop-l
+  @media (min-width: $desktop)
+    @content
+
+
+//== Fonts
+
+@mixin font-size-xxxs
+  font-size: $font-size-mobile-xxxs
+  @include desktop
+    font-size: $font-size-desktop-xxxs
+
+@mixin font-size-xxs
+  font-size: $font-size-mobile-xxs
+  @include desktop
+    font-size: $font-size-desktop-xxs
+
+@mixin font-size-xs
+  font-size: $font-size-mobile-xs
+  @include desktop
+    font-size: $font-size-desktop-xs
+
+@mixin font-size-s
+  font-size: $font-size-mobile-s
+  @include desktop
+    font-size: $font-size-desktop-s
+
+@mixin font-size-m
+  font-size: $font-size-mobile-m
+  @include desktop
+    font-size: $font-size-desktop-m
+
+@mixin font-size-l
+  font-size: $font-size-mobile-l
+  @include desktop
+    font-size: $font-size-desktop-l
+
+@mixin font-size-xl
+  font-size: $font-size-mobile-xl
+  @include desktop
+    font-size: $font-size-desktop-xl
+
+@mixin font-size-xxl
+  font-size: $font-size-mobile-xxl
+  @include desktop
+    font-size: $font-size-desktop-xxl
+
+@mixin font-size-xxxl
+  font-size: $font-size-mobile-xxxl
+  @include desktop
+    font-size: $font-size-desktop-xxxl
+

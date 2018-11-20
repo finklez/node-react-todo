@@ -9,8 +9,11 @@
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "redis": "^2.8.0",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "concurrently": "^4.0.1"
